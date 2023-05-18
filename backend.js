@@ -20,17 +20,7 @@ async function generateTemplate(message) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
-    },
-    body: JSON.stringify({
-      prompt: `Generate an email template for the following message:\n\n${message}\n\n`,
-      max_tokens: 128,
-      temperature: 0.7,
-      n: 1,
-      stop: ['\n\n']
-    })
-  });
-  const data = await response.json();
+      'Authorization': 'Bearer YOUr_API_KEY
   const template = data.choices[0].text.trim();
   if (template === '') {
     throw new Error('Sorry, could not generate email template.');

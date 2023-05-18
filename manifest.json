@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Email Template Generator",
+  "version": "1.0",
+  "description": "Generate email templates using ChatGPT.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "backend.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icon.png"
+    }
+  }
+}
